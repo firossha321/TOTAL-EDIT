@@ -4,7 +4,6 @@ from openai import OpenAI
 import asyncio
 from bot import Bot
 
-loop = asyncio.get_event_loop()
 
 SUPPORT_GROUP = -1001885126003
 SUPPORT_LINK = 'https://t.me/chatgptbotsupport'
