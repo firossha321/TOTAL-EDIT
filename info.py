@@ -48,7 +48,7 @@ else:
 INDEX_CHANNELS = environ.get('INDEX_CHANNELS', '').split()
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = environ.get('AUTH_CHANNEL', '').split()]
+AUTH_CHANNEL = environ.get('AUTH_CHANNEL', '').split()
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
 LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
