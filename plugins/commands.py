@@ -2,7 +2,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from openai import OpenAI
 import asyncio
-from bot import Bot
 
 
 SUPPORT_GROUP = -1001885126003
@@ -19,7 +18,7 @@ START_MESSAGE = """ʜᴇʟʟᴏ, {user},
 # AI setup
 ai_client = OpenAI(api_key=OPENAI_API)
 
-@Bot.on_message(filters.command("start"))
+@Client.on_message(filters.command("start"))
 async def start(client, message):
     welcome_message = START_MESSAGE.format(user=message.from_user.first_name)
     btn1 = [[
@@ -28,7 +27,7 @@ async def start(client, message):
         ]]
     await message.reply_text(welcome_message,reply_markup=InlineKeyboardMarkup(btn1))
 
-@Bot.on_message(filters.command("openai"))
+@Client.on_message(filters.command("openai"))
 async def ask_question(client, message):
     if len(OPENAI_API) == 0:
         return await message.reply("OPENAI_API is empty")
