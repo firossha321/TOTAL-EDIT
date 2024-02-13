@@ -45,7 +45,7 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = environ.get('INDEX_CHANNELS', '').split()
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
 AUTH_CHANNEL = environ.get('AUTH_CHANNEL', '').split()]
